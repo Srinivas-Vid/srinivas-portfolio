@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - Srinivas Erramalla */
+
+@layer base {
+  :root {
+    /* Dynamic AI-Adaptive Color Palette */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+    
+    /* Primary - Adaptive Color (changes based on context) */
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 70%;
+    
+    /* Secondary - Deep Purple */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Tertiary - Teal Accent */
+    --tertiary: 174 72% 56%;
+    --tertiary-foreground: 0 0% 100%;
+    
+    /* Context-Aware Theme Colors */
+    --ai-theme: 262 83% 58%;      /* Purple for AI content */
+    --data-theme: 174 72% 56%;    /* Teal for Data content */
+    --projects-theme: 25 95% 58%; /* Orange for Projects */
+    --achievements-theme: 45 100% 58%; /* Yellow for Achievements */
+    
+    /* Warm Accents */
+    --orange: 25 95% 58%;
+    --orange-foreground: 0 0% 100%;
+    --yellow: 45 100% 58%;
+    --yellow-foreground: 0 0% 15%;
+    
+    /* Enhanced AI Color Aliases */
+    --blue: 210 100% 56%;
+    --purple: 262 83% 58%;
+    --teal: 174 72% 56%;
+    --green: 142 76% 36%;
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --surface: 210 15% 98%;
+    --surface-foreground: 215 20% 25%;
+    
+    /* Neutral Grays */
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 15% 45%;
+    --accent: 210 15% 92%;
+    --accent-foreground: 215 25% 15%;
+    
+    /* Interactive States */
+    --border: 215 15% 88%;
+    --input: 215 15% 88%;
+    --ring: 210 100% 56%;
+    
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Modern Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 56%), hsl(262 83% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 56% / 0.05), hsl(262 83% 58% / 0.05), hsl(174 72% 56% / 0.05));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 15% 98%));
+    --gradient-warm: linear-gradient(135deg, hsl(25 95% 58%), hsl(45 100% 58%));
+    --gradient-cool: linear-gradient(135deg, hsl(210 100% 56%), hsl(174 72% 56%));
+    
+    /* Enhanced Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 15% / 0.1), 0 2px 4px -1px hsl(215 25% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.1), 0 4px 6px -2px hsl(215 25% 15% / 0.05);
+    --shadow-glow: 0 0 40px hsl(210 100% 56% / 0.15);
+    --shadow-warm: 0 10px 30px -10px hsl(25 95% 58% / 0.3);
+    
+    /* Layout */
+    --radius: 0.75rem;
+    --container-padding: 1.5rem;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Theme - Professional Dark Mode */
+    --background: 215 25% 8%;
+    --foreground: 0 0% 95%;
+    
+    /* Modern Colors for Dark Mode */
+    --primary: 210 100% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 75%;
+    
+    --secondary: 262 83% 65%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --tertiary: 174 72% 65%;
+    --tertiary-foreground: 0 0% 100%;
+    
+    --orange: 25 95% 65%;
+    --orange-foreground: 0 0% 100%;
+    --yellow: 45 100% 65%;
+    --yellow-foreground: 0 0% 15%;
+    
+    /* Dark Surface Colors */
+    --card: 215 25% 10%;
+    --card-foreground: 0 0% 95%;
+    --surface: 215 20% 12%;
+    --surface-foreground: 0 0% 85%;
+    
+    /* Dark Neutral Grays */
+    --muted: 215 15% 15%;
+    --muted-foreground: 215 10% 65%;
+    --accent: 215 15% 18%;
+    --accent-foreground: 0 0% 95%;
+    
+    /* Dark Interactive States */
+    --border: 215 15% 20%;
+    --input: 215 15% 20%;
+    --ring: 210 100% 65%;
+    
+    /* Status Colors for Dark */
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 46%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 65%), hsl(262 83% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 65% / 0.08), hsl(262 83% 65% / 0.08), hsl(174 72% 65% / 0.08));
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 10%), hsl(215 20% 12%));
+    --gradient-warm: linear-gradient(135deg, hsl(25 95% 65%), hsl(45 100% 65%));
+    --gradient-cool: linear-gradient(135deg, hsl(210 100% 65%), hsl(174 72% 65%));
+    
+    /* Dark Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 40px hsl(210 100% 65% / 0.25);
+    --shadow-warm: 0 10px 30px -10px hsl(25 95% 65% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    transition: var(--transition-smooth);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container-custom {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Card Gradient */
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  /* Glow Effect */
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Animated Underline */
+  .link-underline {
+    @apply relative;
+  }
+  
+  .link-underline::after {
+    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 ease-out;
+    content: '';
+  }
+  
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Glass Effect */
+  .glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px hsl(0 0% 0% / 0.1);
+  }
+}
